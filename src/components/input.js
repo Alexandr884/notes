@@ -1,8 +1,8 @@
-import React  from "react"
+ import React from "react"
 
- export default function Input(){
+ export default function Input({value,setValue}){ 
 
    return ( 
-     <input className="input" placeholder="Add new task"/>
+    <input className="input" type = "text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Add new task"/>
    )
 }

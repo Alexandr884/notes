@@ -63,41 +63,13 @@
 .note {
   position: relative;
   display: flex;
+  justify-content: space-between;
   width: 100%;
   height: 50px;
   background-color:white;
+  font-size: 20px;
 
 }
 
-.notes {
-  position: relative;
-  display: flex;
-  width: 100%;
-  background-color: white;
-}
 
-.delete {
-   display: flex;
-  width: 50px;
-  border: none;
-  font-size: 16;
-  align-items: center;
-  justify-content: center;
-  color: brown;
-  background-color: white;
-  cursor: pointer;
-  border-radius: 20px;
-}
 
-.edit {
-  display: flex;
-  width: 50px;
-  border: none;
-  font-size: 16;
-  align-items: center;
-  justify-content: center;
-  color: rgb(60, 60, 231);
-  background-color: white;
-  cursor: pointer;
-  border-radius: 20px;
-}
