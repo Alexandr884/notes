@@ -10,15 +10,17 @@ import Button from './components/ button';
  
    const [value,setValue] = useState("");
 
-   const saveButton = () => {
 
-         setTodo(
+   const saveButton = () => {
+        setTodo(
           [...todo,{
             id: Math.random().toString(36).slice(2),
             title: value
           }]
          )
-       } 
+         setValue("")
+      }
+        
 
    return (
    <div className="container">
@@ -26,7 +28,9 @@ import Button from './components/ button';
          <Input  value={value} setValue={setValue}/>
          <Button onButtonClick = {saveButton}/>
          </div>
-         <Notes todo = {todo} />
+         <div className='list'>
+            <Notes todo = {todo}/>
+         </div>
       </div>
 )};
 

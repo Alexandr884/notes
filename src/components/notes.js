@@ -3,12 +3,12 @@ import React from "react"
  export default function Notes ({todo}){
 
    return ( 
-       <div>
+       <div >
          {
             todo.map(item => (
                <div className="note" key={item.id}>
-               <div>{item.title}</div>
-               </div>
+               <>{item.title}</>
+               </div> 
             ))
          }
        </div>
