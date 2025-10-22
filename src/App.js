@@ -9,16 +9,16 @@ import Button from './components/ button';
   const [todo,setTodo] = useState ([])
  
    const [value,setValue] = useState("");
-
-
+    
    const saveButton = () => {
+      
         setTodo(
-          [...todo,{
+          [ ...todo,{
             id: Math.random().toString(36).slice(2),
-            title: value
-          }]
+            title: value 
+          }] 
          )
-         setValue("")
+         setValue("") 
       }
         
 
@@ -26,10 +26,10 @@ import Button from './components/ button';
    <div className="container">
       <div className="task-bar">
          <Input  value={value} setValue={setValue}/>
-         <Button onButtonClick = {saveButton}/>
+         <Button onButtonClick = {saveButton} value={value}/>
          </div>
-         <div className='list'>
-            <Notes todo = {todo}/>
+         <div className="list">
+              <Notes todo = {todo} setTodo={setTodo}/>
          </div>
       </div>
 )};
