@@ -9,9 +9,14 @@ import Button from './components/ button';
   const [todo,setTodo] = useState ([])
  
    const [value,setValue] = useState("");
+
+   console.log(todo)
+     const deliteTodo = (id) => {
+      setTodo([...todo.filter(e => e.id !== id)])
+       }
     
    const saveButton = () => {
-      
+
         setTodo(
           [ ...todo,{
             id: Math.random().toString(36).slice(2),
@@ -29,7 +34,7 @@ import Button from './components/ button';
          <Button onButtonClick = {saveButton} value={value}/>
          </div>
          <div className="list">
-              <Notes todo = {todo} setTodo={setTodo}/>
+              <Notes todo = {todo} setTodo={setTodo} deliteTodo={deliteTodo}/>
          </div>
       </div>
 )};
