@@ -10,9 +10,8 @@ import Button from './components/ button';
  
    const [value,setValue] = useState("");
 
-   console.log(todo)
      const deliteTodo = (id) => {
-      setTodo([...todo.filter(e => e.id !== id)])
+      setTodo([...todo.filter(e => e.id !== id )])
        }
     
    const saveButton = () => {
